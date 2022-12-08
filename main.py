@@ -4,14 +4,13 @@ import os
 from dotenv import load_dotenv
 import youtube_dl
 
-load_dotenv()
-
 # Get the API token from the .env file
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = "MzkwOTc5OTkzMzE4MDY0MTQ4.GSNQEG.RTSUZa9hxEh-cl9p1JftBOU11q6nyR7cAHeTkE"
 
 intents = discord.Intents().all()
 client = discord.Client(intents=intents)
-bot = commands.Bot(command_prefix='!',intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents)
+
 
 @client.event
 async def on_ready():
@@ -19,4 +18,3 @@ async def on_ready():
 
 
 client.run(TOKEN)
-
